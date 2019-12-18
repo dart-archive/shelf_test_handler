@@ -121,7 +121,7 @@ void main() {
   });
 }
 
-void _expectZoneFailure(Future callback()) {
+void _expectZoneFailure(Future Function() callback) {
   runZoned(callback, onError: expectAsync1((error) {
     expect(error, TypeMatcher<TestFailure>());
   }));
