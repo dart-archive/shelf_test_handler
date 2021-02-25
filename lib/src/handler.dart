@@ -89,7 +89,7 @@ class ShelfTestHandler {
     } catch (error, stackTrace) {
       _zone.handleUncaughtError(error, stackTrace);
       // We can't return null here, the handler type doesn't allow it.
-      return Response.internalServerError(body: 'Response Hijacked');
+      return Response.internalServerError(body: '$error');
     }
   }
 }
